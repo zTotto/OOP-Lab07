@@ -3,9 +3,9 @@
  */
 package it.unibo.oop.lab.enum1;
 
+import java.util.HashSet;
 import java.util.Set;
 
-import it.unibo.oop.lab.nesting1.SportSocialNetworkUserImpl.Sport;
 import it.unibo.oop.lab.socialnetwork.SocialNetworkUserImpl;
 import it.unibo.oop.lab.socialnetwork.User;
 
@@ -33,7 +33,7 @@ public class SportSocialNetworkUserImpl<U extends User> extends SocialNetworkUse
      * 
      * add a field to keep track of the set of sports followed/done by a user
      */
-    private Set<Sport> sports;
+    private Set<Sport> sports = new HashSet<>();
 
 
     /**
