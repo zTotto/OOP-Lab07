@@ -20,45 +20,25 @@ public final class TestSportByStaticInnerClass {
      *            ignored
      */
     public static void main(final String... args) {
-        /*
-         * TODO: create 3 sport social network users (SportSocialNetworkUser):
-         * 
-         * Davide Cassani , dcassani, 53
-         * 
-         * Bernie Ecclestone, becclestone, 83
-         * 
-         * Fernando Alonso, falonso, 34
-         */
+
         final SportSocialNetworkUserImpl<User> dcassani = new SportSocialNetworkUserImpl<>("Davide", "Cassani", "dcassani",  53);
         final SportSocialNetworkUserImpl<User> becclestone = new SportSocialNetworkUserImpl<>("Bernie", "Ecclestone", "becclestone",  83);
         final SportSocialNetworkUserImpl<User> falonso = new SportSocialNetworkUserImpl<>("Fernando", "Alonso", "falonso",  34);
 
-        /*
-         * TODO: alonso is a fan of soccer and bike and practices F1: 
-         * add these sports to Alonso
-         * 
-         * falonso.addSport(SportSocialNetworkUserImpl.F1);
-         * 
-         * ...
-         */
         falonso.addSport(SportSocialNetworkUserImpl.BIKE);
         falonso.addSport(SportSocialNetworkUserImpl.F1);
         falonso.addSport(SportSocialNetworkUserImpl.SOCCER);
         
         System.out.println("Alonso practices F1: " + falonso.hasSport(SportSocialNetworkUserImpl.F1));
         System.out.println("Alonso does not like volley: " + !falonso.hasSport(SportSocialNetworkUserImpl.VOLLEY));
-        /*
-         * Cassani practiced bike and loves F1 and MotoGP
-         */
+
         dcassani.addSport(SportSocialNetworkUserImpl.BIKE);
         dcassani.addSport(SportSocialNetworkUserImpl.F1);
         dcassani.addSport(SportSocialNetworkUserImpl.MOTOGP);
         System.out.println("Cassani has been a professional biker: "
                 + dcassani.hasSport(SportSocialNetworkUserImpl.BIKE));
         System.out.println("Cassani does not like soccer: " + !dcassani.hasSport(SportSocialNetworkUserImpl.SOCCER));
-        /**
-         * Ecclestone is the de-facto owner of F1 but also a fan of basket.
-         */
+        
         becclestone.addSport(SportSocialNetworkUserImpl.F1);
         becclestone.addSport(SportSocialNetworkUserImpl.BASKET);
         System.out.println("Bernie's the boss when it comes to F1: "
